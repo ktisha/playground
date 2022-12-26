@@ -3,3 +3,7 @@ Fixed using `session.protocol.scheduler.queue`
 
 2. Only RemoteProjectSession has `session.protocol.projectViewModel` not `ClientProjectSession`
 This leads to dependency on CodeWithMe plugin
+
+3. No one calls fire?
+
+4. Changing Project view tab on host is not reflected on client
