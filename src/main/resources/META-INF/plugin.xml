@@ -1,0 +1,11 @@
+<idea-plugin>
+    <id>com.example.playground</id>
+    <name>Playground</name>
+    <depends>com.intellij.modules.platform</depends>
+    <dependencies>
+        <plugin id="com.jetbrains.codeWithMe"/>
+    </dependencies>
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService serviceImplementation="com.example.playground.EduRemoteService" client="remote" preload="true"/>
+    </extensions>
+</idea-plugin>

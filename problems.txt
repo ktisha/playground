@@ -1,0 +1,5 @@
+1. Illegal scheduler for current action, must be: com.jetbrains.rd.platform.protocol.EdtScheduler@13744633, current thread: 30:JobScheduler FJ pool 9/11, debug info: ProjectViewModel: `CodeWithMe-SecureWireOverStreamTransport(Tcp:/192.168.1.14:57661).ProjectViewModel`
+Fixed using `session.protocol.scheduler.queue`
+
+2. Only RemoteProjectSession has `session.protocol.projectViewModel` not `ClientProjectSession`
+This leads to dependency on CodeWithMe plugin
