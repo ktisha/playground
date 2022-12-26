@@ -16,19 +16,7 @@ class EduRemoteService(private val session: RemoteProjectSession) : LifetimedSer
     scheduler.queue {
       LOG.info("scheduler.queue")
       val model = session.protocol.projectViewModel
-
-      model.activate.advise(serviceLifetime) {
-//        model.currentPane.set("PackagesPane")
-        val toolWindow = ToolWindowManager.getInstance(project).getToolWindow(ToolWindowId.PROJECT_VIEW)
-        LOG.info("Project view toolwindow $toolWindow")
-        val projectView = ProjectView.getInstance(project)
-        if (projectView != null) {
-          LOG.info("activate Project view")
-          val result = projectView.changeViewCB("PackagesPane", null)
-          LOG.info("activate Project view $result")
-        }
-      }
-//      model.activate.fire("test")
+      model.activate.fire("PackagesPane")
     }
   }
 
